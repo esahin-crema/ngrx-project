@@ -9,6 +9,11 @@ import { ProductComponent } from './product/product.component';
 import {Routes,RouterModule} from '@angular/router'
 import { StoreModule } from '@ngrx/store';
 import {reducer} from './store/reducer';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCard, MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
+import { MatDividerModule } from "@angular/material/divider";
 
 const routes:Routes=[
   {
@@ -46,7 +51,12 @@ const routes:Routes=[
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    StoreModule.forRoot({cart:reducer})
+    StoreModule.forRoot({cart:reducer}),
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import {Store,select} from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="text-center">Online Store</h1>
+        <h1 class="text-center"><a [routerLink]="['/products']">Online Store</a></h1>
         <h6 class="text-center"><a [routerLink]="['/cart']">Cart: {{(cart | async).length}}</a></h6>
         <hr />
       </div>
